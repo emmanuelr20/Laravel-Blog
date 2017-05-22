@@ -24,6 +24,7 @@ class ArticlesController extends Controller
         if (!$article) {
             abort("Article Not Found", 404);
         }
-        return view('articles.view_article', compact('article'));
+        $comments = $article->comments()->get();
+        return view('articles.view_article', compact('article', 'comments'));
     }
 }

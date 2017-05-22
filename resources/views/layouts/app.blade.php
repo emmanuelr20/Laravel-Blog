@@ -28,7 +28,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/admin') }}">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         WTF Blog
                     </a>
                 </div>
@@ -58,6 +58,8 @@
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
+                                        <a href="/admin">Dashboard</a>
+                                        <a href="/admin/articles">Articles</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
