@@ -21,7 +21,8 @@ class AdminController extends Controller
     }
     public function view(Article $article)
     {
-       return view('admin.view_article', compact('article'));
+        $comments = $article->comments()->get();
+        return view('admin.view_article', compact('article', 'comments'));
     }
      public function viewAll($value='')
     {
